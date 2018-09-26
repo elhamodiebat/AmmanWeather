@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Amman</string>
+    <string name="wind">الرياح</string>
+    <string name="cloud">الغيوم</string>
+    <string name="pressure">الضغط</string>
+    <string name="humidity">الرطوبة</string>
+    <string name="sunrise">شروق الشمس</string>
+    <string name="sunset">غروب الشمس</string>
+    <string name="Min">الحد الأدنى :</string>
+    <string name="max">الحد الاعلى :</string>
+    <string name="last_update">اخر تحديث :</string>
+</resources>

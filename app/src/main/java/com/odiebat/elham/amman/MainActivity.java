@@ -95,13 +95,13 @@ public class MainActivity extends AppCompatActivity {
             String update = dateFormat.format(new Date(weather.place.getLastUpdate()));
 
 
-            DecimalFormat decimalFormat = new DecimalFormat("#.##");
+            DecimalFormat decimalFormat = new DecimalFormat("0.00");
             String tempFormat = decimalFormat.format(weather.currentCondition.getTemperature());
             String maxFormat = decimalFormat.format(weather.currentCondition.getMaxTemp());
             String minFormat = decimalFormat.format(weather.currentCondition.getMinTemp());
 
-            maxTemp.setText("Max :" + maxFormat);
-            minTemp.setText("Max :" + minFormat);
+            maxTemp.setText(getString(R.string.max)+ maxFormat);
+            minTemp.setText(getString(R.string.Min)+ minFormat);
             cityName.setText(weather.place.getCity() + "," + weather.place.getCountry());
             Temp.setText(tempFormat + "°C");
             humidity.setText(weather.currentCondition.getHumidity() +" %");
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
             sunrise.setText(sunriseDate);
             sunset.setText(sunsetDate);
             cloud.setText(weather.currentCondition.getCondition() + "("+weather.currentCondition.getDescription()+")");
-            updated.setText("Last Updated : "+update);
+            updated.setText(getString(R.string.last_update)+update);
 
 
 
