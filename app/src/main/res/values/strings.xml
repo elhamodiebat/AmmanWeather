@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Amman</string>
+    <string name="change">Change City</string>
+    <string name="wind">Wind</string>
+    <string name="cloud">Cloud</string>
+    <string name="pressure">Pressure</string>
+    <string name="humidity">Humidity</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="last_update">Last Update</string>
+</resources>
