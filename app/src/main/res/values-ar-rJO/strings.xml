@@ -7,7 +7,7 @@
     <string name="humidity">الرطوبة</string>
     <string name="sunrise">شروق الشمس</string>
     <string name="sunset">غروب الشمس</string>
-    <string name="Min">الحد الأدنى :</string>
-    <string name="max">الحد الاعلى :</string>
+    <string name="Min"> الحد الأدنى :</string>
+    <string name="max"> الحد الاعلى :</string>
     <string name="last_update">اخر تحديث :</string>
 </resources>

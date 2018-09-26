@@ -10,8 +10,7 @@ import java.net.URL;
 import utils.utlis;
 
 public class WeatherHttpClient {
-    public String getWeatherData(String place)
-    {
+    public String getWeatherData(String place) {
         HttpURLConnection urlConnection = null;
         InputStream inputStream = null;
 
@@ -27,8 +26,7 @@ public class WeatherHttpClient {
             inputStream = urlConnection.getInputStream();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
             String line = null;
-            while ((line =  bufferedReader.readLine()) != null)
-            {
+            while ((line = bufferedReader.readLine()) != null) {
                 stringBuffer.append(line + "\r\n");
 
 
@@ -37,7 +35,6 @@ public class WeatherHttpClient {
             urlConnection.disconnect();
 
             return stringBuffer.toString();
-
 
 
         } catch (IOException e) {

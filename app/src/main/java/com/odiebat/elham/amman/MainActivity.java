@@ -29,8 +29,6 @@ import utils.utlis;
 public class MainActivity extends AppCompatActivity {
 
 
-
-
     private TextView cityName;
     private TextView Temp;
     private TextView cloud;
@@ -42,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView updated;
     private TextView maxTemp;
     private TextView minTemp;
-
-
 
 
     Weather weather = new Weather();
@@ -71,19 +67,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
-    public void renderWeatherData(String city)
-    {
+    public void renderWeatherData(String city) {
 
         WeatherTask weatherTask = new WeatherTask();
         weatherTask.execute(new String[]{city + "&appid=4788ee4ce9877888efd3ba241e06e19c"});
     }
 
 
-
-    private class WeatherTask extends AsyncTask<String, Void , Weather>{
+    private class WeatherTask extends AsyncTask<String, Void, Weather> {
         @Override
         protected void onPostExecute(Weather weather) {
             super.onPostExecute(weather);
@@ -100,21 +91,17 @@ public class MainActivity extends AppCompatActivity {
             String maxFormat = decimalFormat.format(weather.currentCondition.getMaxTemp());
             String minFormat = decimalFormat.format(weather.currentCondition.getMinTemp());
 
-            maxTemp.setText(getString(R.string.max)+ maxFormat);
-            minTemp.setText(getString(R.string.Min)+ minFormat);
+            maxTemp.setText(getString(R.string.max) + maxFormat);
+            minTemp.setText(getString(R.string.Min) + minFormat);
             cityName.setText(weather.place.getCity() + "," + weather.place.getCountry());
             Temp.setText(tempFormat + "°C");
-            humidity.setText(weather.currentCondition.getHumidity() +" %");
+            humidity.setText(weather.currentCondition.getHumidity() + " %");
             pressure.setText(weather.currentCondition.getPressure() + " hPa");
-            wind.setText(weather.wind.getSpeed()+" mPs");
+            wind.setText(weather.wind.getSpeed() + " mPs");
             sunrise.setText(sunriseDate);
             sunset.setText(sunsetDate);
-            cloud.setText(weather.currentCondition.getCondition() + "("+weather.currentCondition.getDescription()+")");
-            updated.setText(getString(R.string.last_update)+update);
-
-
-
-
+            cloud.setText(weather.currentCondition.getCondition() + "(" + weather.currentCondition.getDescription() + ")");
+            updated.setText(getString(R.string.last_update) + update);
 
 
         }
@@ -127,16 +114,14 @@ public class MainActivity extends AppCompatActivity {
 
             weather = JSONWeatherParser.getWeather(data);
 
-            Log.v("weather",weather.place.getCity().toString());
-            Log.v("lat",weather.place.getLat()+" hi ");
+            Log.v("weather", weather.place.getCity().toString());
+            Log.v("lat", weather.place.getLat() + " hi ");
             // ooh we can now go to onPost execute in order to show the data
-
 
 
             return weather;
         }
     }
-
 
 
 }

@@ -8,10 +8,10 @@
     tools:context=".Splash">
 
     <ImageView
-
-        android:src="@drawable/logo"
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/logo"
         android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
